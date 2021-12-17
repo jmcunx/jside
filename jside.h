@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2019 2020 2021
+ * Copyright (c) 2019 2020 2021 2022
  *     John McCue <jmccue@jmcunx.com>
  *
  * Permission to use, copy, modify, and distribute this software for any
@@ -17,7 +17,7 @@
 
 #ifndef JSIDE_H
 
-#define JSIDE_H "$Id: jside.h,v 1.4 2020/06/17 01:28:01 jmccue Exp $"
+#define JSIDE_H "INCLUDED"
 
 #define PROG_NAME  "jside"
 
@@ -71,6 +71,4 @@ struct s_raw *raw_load(FILE *, char *, char *, int, int);
 void raw_write_side(FILE *, struct s_raw *, char *, int);
 void raw_free(struct s_raw **, int);
 
-#endif /*  TEMPL_H  */
-
-/* END: jside.h */
+#endif /*  JSIDE_H  */

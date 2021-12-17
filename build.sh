@@ -1,7 +1,7 @@
 #!/bin/sh
 #
 #===========================================================================
-# Copyright (c) 2020 2021
+# Copyright (c) 2020 2021 2022
 #     John McCue <jmccue@jmcunx.com>
 #
 # Permission to use, copy, modify, and distribute this software for any

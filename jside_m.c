@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2019 2020 2021
+ * Copyright (c) 2019 2020 2021 2022
  *     John McCue <jmccue@jmcunx.com>
  *
  * Permission to use, copy, modify, and distribute this software for any
@@ -15,6 +15,9 @@
  * OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
  */
 
+#ifndef _MSDOS
+#include <sys/param.h>
+#endif
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -23,8 +26,6 @@
 #include <j_lib2m.h>
 
 #include "jside.h"
-
-char *jside_m_c="$Id: jside_m.c,v 1.5 2021/02/21 20:48:22 jmccue Exp $";
 
 #define REC_SIZE_INIT 400
 
@@ -97,7 +98,7 @@ void raw_free_col(struct s_raw *r, int max_cols)
   free(r->field_col);
   r->field_col = (char **) NULL;
 
-} /* END: raw_free_col() */
+} /* raw_free_col() */
 
 /*
  * raw_free() -- free memory
@@ -282,5 +283,3 @@ struct s_raw *raw_load(FILE *fperr, char *fname, char *delim,
   return(raw);
 
 } /* raw_load() */
-
-/* jside_m.c */

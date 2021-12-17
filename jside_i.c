@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2019 2020 2021
+ * Copyright (c) 2019 2020 2021 2022
  *     John McCue <jmccue@jmcunx.com>
  *
  * Permission to use, copy, modify, and distribute this software for any
@@ -15,7 +15,9 @@
  * OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
  */
 
+#ifndef _MSDOS
 #include <sys/param.h>
+#endif
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
@@ -29,8 +31,6 @@
 #include "jside.h"
 
 #define SCKARG 80
-
-char *jside_i_c="$Id: jside_i.c,v 1.4 2021/02/21 20:48:22 jmccue Exp $";
 
 /*
  * get_delm() -- translate a number or string into a delimiter
@@ -204,5 +204,3 @@ void init(int argc, char **argv, struct s_work *w)
   process_arg(argc, argv, w);
 
 }  /* init() */
-
-/* END: jside_i.c */
