@@ -243,7 +243,7 @@ struct s_raw *raw_load(FILE *fperr, char *fname, char *delim,
       exit(EXIT_FAILURE);
     }
 
-  while ((creads = getline(&buf, &bsize, fp)) >= 0)
+  while ((creads = j2_getline(&buf, &bsize, fp)) >= 0)
     {
       rcount++;
       j2_rtw(buf);
