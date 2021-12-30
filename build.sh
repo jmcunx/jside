@@ -73,6 +73,8 @@ fi
 
 OS=`uname -s`
 export OS
+GROUP=`id -gn`
+export GROUP
 
 found_dir_set="N"
 
@@ -125,7 +127,10 @@ if test "$LOCAL_HOME" != ""
 then
     if test "$found_dir_set" = "N"
     then
-	s06="s%/opt/jmc%$LOCAL_HOME%"
+	if test ! -d /opt/jmc
+	then
+	    s06="s%/opt/jmc%$LOCAL_HOME%"
+	fi
     fi
 fi
 if test "$DEBUG" != ""
