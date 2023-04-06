@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2019 2020 2021 2022
+ * Copyright (c) 2019 2020 ... 2023 2024
  *     John McCue <jmccue@jmcunx.com>
  *
  * Permission to use, copy, modify, and distribute this software for any
@@ -25,8 +25,11 @@
 #include <errno.h>
 #include <fcntl.h>
 #include <unistd.h>  /*** for access() ***/
+
+#ifdef HAVE_JLIB
 #include <j_lib2.h>
 #include <j_lib2m.h>
+#endif
 
 #include "jside.h"
 
